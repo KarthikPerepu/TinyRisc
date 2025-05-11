@@ -32,9 +32,30 @@ TinyRISC is a basic 32-bit load/store RISC processor with:
 ---
 
 ## Repository Layout
-
-
----
+├── README.md
+├── src/ # All Verilog RTL modules
+│ ├── if_stage.v
+│ ├── id_stage.v
+│ ├── ex_stage.v
+│ ├── mem_stage.v
+│ ├── wb_stage.v
+│ ├── regfile.v
+│ ├── alu.v
+│ └── top.v # Top-level module instantiating all stages
+│
+├── tb/ # Testbench files
+│ ├── tb_tinyrisc.v
+│ └── mem_model.v
+│
+├── constrs/ # FPGA constraint files
+│ └── tinyrisc.xdc
+│
+├── sim/ # Simulation scripts
+│ ├── run_icarus.sh
+│ └── run_modelsim.do
+│
+└── docs/ # Optional design docs, block diagrams, etc.
+└── pipeline.pdf
 
 ## Prerequisites
 
